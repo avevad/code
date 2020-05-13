@@ -19,13 +19,6 @@
 
 using std::string;
 
-static string generate_address() {
-    string address;
-    for (int i = 0; i < 10; i++) {
-        address += char('a' + rand() % ('z' - 'a'));
-    }
-    return address;
-}
 
 static const string DEFAULT_USER = "user";
 
