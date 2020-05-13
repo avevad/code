@@ -204,9 +204,9 @@ void exec_cmd(string &project_directory, std::list<string> &cmd_tokens) {
         std::thread *thread = boot_computer(computer);
         thread->join();
 
-        //SDL_Event quit_event;
-        //quit_event.type = SDL_QUIT; // signalling thread to terminate
-        //SDL_PushEvent(&quit_event);
+        SDL_Event quit_event;
+        quit_event.type = SDL_QUIT; // signalling thread to terminate
+        SDL_PushEvent(&quit_event);
         event_thread.join(); // waiting for thread to terminate
 
         delete thread;

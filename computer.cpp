@@ -37,6 +37,13 @@ Component *Computer::get_component(const string &component_address) {
     return nullptr;
 }
 
+Component *Computer::get_component_by_name(const string &component_name) {
+    for (Component *component : components) {
+        if (component->name == component_name) return component;
+    }
+    return nullptr;
+}
+
 
 string get_computer_address(const string &project_dir, const string &computer_name) {
     std::ifstream in(project_dir + COMPUTERS_FOLDER + computer_name + COMPUTER_ADDRESS_FILE);

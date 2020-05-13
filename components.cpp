@@ -498,7 +498,7 @@ int Screen::invoke(const string &method, lua_State *state) {
         lua_createtable(state, keyboards.size(), 1);
         int keyboards_table = lua_gettop(state);
         for (int i = 0; i < keyboards.size(); i++) {
-            lua_pushstring(state, keyboards[i].c_str());
+            lua_pushstring(state, computer->get_component_by_name(keyboards[i])->address.c_str());
             lua_seti(state, keyboards_table, i + 1);
         }
         lua_pushliteral(state, "n");

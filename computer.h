@@ -47,6 +47,8 @@ public:
     int get_components(std::vector<Component *> *v);
 
     Component *get_component(const string &component_address);
+
+    Component *get_component_by_name(const string &component_name);
 };
 
 #endif //CODE_COMPUTER_H
