@@ -1,0 +1,7 @@
+eeprom-openloader
+hdd-temp
+floppy-openos
+screen-tier3
+keyboard
+gpu-tier3
+
